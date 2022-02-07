@@ -35,3 +35,13 @@ dbt-demo
 ├── .gitignore
 ├── dbt_project.yml
 └── README.md
+
+## Hints:
+#### Commands
+dbt run -s staging - run all staging
+dbs docs generate
+
+#### Blocks
+{{ config(
+materialized='table'
+) }}
