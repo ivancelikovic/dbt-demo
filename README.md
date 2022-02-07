@@ -13,3 +13,25 @@ Try running the following commands:
 - Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+
+## Structure:
+dbt-demo
+├── analysis
+├── dbt_packages
+├── logs
+├── macros
+├── models
+    └── marts
+        └── core
+            └── dim_customers.sql  
+    └── staging
+        └── jaffle_shop
+            ├── stg_customers.sql
+            └── stg_orders.sql 
+├── seeds
+├── snapshots
+├── target
+├── tests
+├── .gitignore
+├── dbt_project.yml
+└── README.md
