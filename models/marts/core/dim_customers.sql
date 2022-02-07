@@ -8,9 +8,9 @@ orders as (
     select * from {{ ref('stg_orders') }}
 ),
 
-payments as (
+fct_orders as (
 
-    select * from {{ ref('stg_payments') }}
+    select * from {{ ref('fct_orders') }}
 ),
 
 customer_orders as (
@@ -34,7 +34,7 @@ customer_spending as (
         customer_id,
         sum(amount) as lifetime_value
 
-    from payments
+    from fct_orders
 
     group by 1
 
