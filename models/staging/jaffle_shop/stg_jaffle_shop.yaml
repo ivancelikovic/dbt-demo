@@ -9,6 +9,10 @@ models:
         tests:
           - unique
           - not_null
+      - name: first_name
+        description: Customer first name.
+      - name: last_name
+        description: Customer last name.
 
   - name: stg_orders
     description: Staged order data from our jaffle shop app.
@@ -23,6 +27,8 @@ models:
         tests:
           - accepted_values:
               values: ['completed', 'shipped', 'returned', 'return_pending', 'placed']
+      - name: order_date
+        description: Exact date the order was placed.
       - name: customer_id
         description: Foreign key to stg_customers.customer_id.
         tests:
